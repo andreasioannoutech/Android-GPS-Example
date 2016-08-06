@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GPS_location</string>
+    <string name="title_activity_network_location">NetworkLocation</string>
 </resources>

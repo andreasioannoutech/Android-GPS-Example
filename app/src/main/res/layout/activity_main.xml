@@ -13,21 +13,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GPS INFO HERE"
+        android:id="@+id/txtData"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/btngps"
-        android:layout_alignStart="@+id/btngps"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="25dp"
-        android:id="@+id/txtGPS" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/btngps"
+        android:id="@+id/btnGPSshow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SHOW GPS LOCATION"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp" />
+        android:text="SHOW\nDATA"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS\nOn/Off"
+        android:id="@+id/btnGPStoggle"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnGPSshow"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NW\n ON/OFF"
+        android:id="@+id/btnNWpro"
+        android:layout_below="@+id/btnGPStoggle"
+        android:layout_alignLeft="@+id/btnGPStoggle"
+        android:layout_alignStart="@+id/btnGPStoggle" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:id="@+id/btnClear"
+        android:layout_below="@+id/btnNWpro"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOTH On/Off"
+        android:id="@+id/btnBothProviders"
+        android:layout_below="@+id/btnClear"
+        android:layout_alignLeft="@+id/btnClear"
+        android:layout_alignStart="@+id/btnClear" />
 
 </RelativeLayout>
