@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnNWtoggle;
     private Button btnClear;
     private Button btnBothProvToggle;
+    private Button btnEnabled;
     private TextView txtData;
     private LocationManager locationManager;
     private LocationListener listener;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnNWtoggle = (Button) findViewById(R.id.btnNWpro);
         btnClear = (Button) findViewById(R.id.btnClear);
         btnBothProvToggle = (Button) findViewById(R.id.btnBothProviders);
+        btnEnabled = (Button) findViewById(R.id.btnEnabled);
         txtData = (TextView) findViewById(R.id.txtData);
 
 
@@ -214,6 +216,25 @@ public class MainActivity extends AppCompatActivity {
                 txtData.setText("GPS INFO HERE");
                 i = 0;
                 currentLocation = null;
+            }
+        });
+
+        btnEnabled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (locationManager != null){
+                    Boolean isEnabledGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+                    Boolean isEnabledNW = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+                    txtData.append("\nGPS PROVIDER: " + isEnabledGPS);
+                    txtData.append("\nNW PROVIDER: " + isEnabledNW);
+                }else {
+                    locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+                    Boolean isEnabledGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+                    Boolean isEnabledNW = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+                    txtData.append("\nGPS PROVIDER: " + isEnabledGPS);
+                    txtData.append("\nNW PROVIDER: " + isEnabledNW);
+                    locationManager = null;
+                }
             }
         });
 

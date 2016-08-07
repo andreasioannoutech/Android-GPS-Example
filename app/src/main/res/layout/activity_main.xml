@@ -63,4 +63,13 @@
         android:layout_alignLeft="@+id/btnClear"
         android:layout_alignStart="@+id/btnClear" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOC\nENABLED?"
+        android:id="@+id/btnEnabled"
+        android:layout_below="@+id/btnBothProviders"
+        android:layout_alignLeft="@+id/btnBothProviders"
+        android:layout_alignStart="@+id/btnBothProviders" />
+
 </RelativeLayout>
